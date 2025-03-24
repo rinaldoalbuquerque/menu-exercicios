@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Horizontal com Ícones</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+   <style>
+.menu-horizontal {
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Fundo com gradiente */
+    padding: 15px 20px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.menu-horizontal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    flex-wrap: wrap; /* Evita quebra brusca */
+    gap: 20px;
+}
+
+.menu-horizontal ul li {
+    display: inline-block;
+}
+
+.menu-horizontal ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.menu-horizontal ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🔹 Esconde o botão hambúrguer em telas grandes */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* 🔹 Responsividade: Transforma em menu hambúrguer */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Agora o botão aparece */
+    }
+
+    .menu-horizontal ul {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Esconde o menu por padrão */
+        width: 100%;
+        background: #1e3c72;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .menu-horizontal ul.active {
+        display: flex; /* Mostra quando ativo */
+    }
+}
+
+
+   </style>
+</head>
+<body>
+    <nav  class="menu-horizontal">
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <ul >
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-file-alt"></i> Documentos</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> E-mail</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+        </ul>
+    </nav>
+    
+    <script defer src="script.js"></script>
+
+</body>
+</html>

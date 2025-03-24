@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+.menu-dropdown ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+.menu-dropdown ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-dropdown ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.menu-dropdown ul li a:hover {
+    background: #22b9e7;
+    border-radius: 5px;
+    color: rgb(9, 255, 193);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+}
+
+.submenu li {
+    display: block;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+}
+
+.menu-dropdown ul li:hover .submenu {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="menu-dropdown">
+        <ul>
+            <li>
+                <a href="#"><i class="fas fa-bars"></i> Menu</a>
+                <ul class="submenu">
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    
+</body>
+</html>

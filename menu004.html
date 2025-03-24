@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu com Animação de Expansão</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+    .menu-expand {
+    width: 60px;
+    background: #222;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.menu-expand:hover {
+    width: 200px;
+    
+}
+
+.menu-expand ul li a:hover{
+    color: aqua;
+}
+
+.menu-expand ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-expand ul li {
+    padding: 15px;
+}
+
+.menu-expand ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.menu-expand ul li a span {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu-expand:hover ul li a span {
+    opacity: 1;
+}
+
+</style>
+
+</head>
+<body>
+    <nav class="menu-expand">
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i><span> Home</span></a></li>
+            <li><a href="#"><i class="fas fa-user"></i><span> Perfil</span></a></li>
+            <li><a href="#"><i class="fas fa-cogs"></i><span> Configurações</span></a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i><span> Sair</span></a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
